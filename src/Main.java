@@ -16,7 +16,7 @@ public class Main {
         System.out.println("=====================================");
         System.out.println("DADOS DA CONTA:");
         System.out.println("Nome: " + nome); //fazer aparecer de forma dinamina
-        System.out.println("Saldo atual: " + saldoAtual); //fazer aparecer de forma dinamina
+        System.out.println("Saldo atual: R$" + saldoAtual); //fazer aparecer de forma dinamina
         System.out.println("Última transação: Deposito: 1000 "); //fazer aparecer de forma dinamina
         System.out.println("=====================================");
         System.out.println();
@@ -26,5 +26,46 @@ public class Main {
         System.out.println("2- Realizar deposito");
         System.out.println("3- Realizar transferencia");
         System.out.println("4- Sair");
+        int escolha = leitura.nextInt();
+        double valorDeposito = 0;
+        double valorTransferencia = 0;
+
+
+
+
+        switch (escolha){
+            case 1:
+                System.out.println("Saldo atual: R$ " + saldoAtual);
+                break;
+            case 2:
+                System.out.println("Informe o valor a ser depositado: ");
+                valorDeposito = leitura.nextDouble();
+                saldoAtual+= valorDeposito;
+                System.out.println("Operação concluída");
+                System.out.println();
+                System.out.println("Saldo Atual: R$"+ saldoAtual);
+                break;
+            case 3:
+                System.out.println("Informe o valor a ser transferido: ");
+                valorTransferencia = leitura.nextDouble();
+                saldoAtual -= valorTransferencia;
+                if (saldoAtual<0){
+                    System.out.println("Saldo insuficiente para realizar essa operação");
+                }else {
+                    System.out.println();
+                    System.out.println("Saldo Atual: R$"+ saldoAtual);
+                }
+
+                break;
+            case 4:
+                System.out.println("Obrigado por usar o usa o nosso banco!!!");
+                System.out.println();
+                System.out.println("Tenha um bom dia.");
+                break;
+            default:
+                System.out.println("Insira uma opção válida");
+                break;
+        }
+
     }
 }
