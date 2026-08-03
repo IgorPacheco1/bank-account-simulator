@@ -1,9 +1,22 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+
+        Scanner leitura = new Scanner(System.in);
+
+        System.out.println("Para iniarmos seu atendimento por favor informe os seguintes dados:");
+        System.out.println();
+        System.out.println("Qual o seu nome:");
+        String nome = leitura.nextLine();
+        System.out.println("Informe qual o saldo que tem no banco: ");
+        double saldoAtual = leitura.nextDouble();
+
+
         System.out.println("=====================================");
         System.out.println("DADOS DA CONTA:");
-        System.out.println("Nome: Igor"); //fazer aparecer de forma dinamina
-        System.out.println("Saldo atual: 1500"); //fazer aparecer de forma dinamina
+        System.out.println("Nome: " + nome); //fazer aparecer de forma dinamina
+        System.out.println("Saldo atual: " + saldoAtual); //fazer aparecer de forma dinamina
         System.out.println("Última transação: Deposito: 1000 "); //fazer aparecer de forma dinamina
         System.out.println("=====================================");
         System.out.println();
