@@ -21,6 +21,8 @@ public class Main {
                 4-Sair
                 =====================================
                 """;
+
+
         System.out.println();
         System.out.println(menu);
         int escolha = leitura.nextInt();
@@ -28,9 +30,8 @@ public class Main {
         double valorTransferencia=0;
 
         while(escolha != 4){
-            System.out.println();
-            System.out.println(menu);
-            escolha = leitura.nextInt();
+
+
 
             if (escolha ==1){
                 System.out.println("Saldo atual: R$" + saldoAtual);
@@ -50,7 +51,9 @@ public class Main {
                     saldoAtual -= valorTransferencia;
                 }
             }
-
+            System.out.println();
+            System.out.println(menu);
+            escolha = leitura.nextInt();
         }
     }
 }
