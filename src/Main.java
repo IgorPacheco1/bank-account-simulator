@@ -14,12 +14,43 @@ public class Main {
         System.out.println("Nome: " + nome);
         System.out.println("Saldo atual: R$" + saldoAtual);
         String menu = """
-                =====================================,
-                1-Consultar saldo,
-                2-Realizar deposito,
-                3-Realizar transferencia,
+                =====================================
+                1-Consultar saldo
+                2-Realizar deposito
+                3-Realizar transferencia
                 4-Sair
+                =====================================
                 """;
+        System.out.println();
+        System.out.println(menu);
+        int escolha = leitura.nextInt();
+        double valorDepositado=0;
+        double valorTransferencia=0;
 
+        while(escolha != 4){
+            System.out.println();
+            System.out.println(menu);
+            escolha = leitura.nextInt();
+
+            if (escolha ==1){
+                System.out.println("Saldo atual: R$" + saldoAtual);
+                System.out.println();
+            } else if (escolha ==2) {
+                System.out.println("Insira o valor a ser depositado: ");
+                valorDepositado = leitura.nextInt();
+                saldoAtual += valorDepositado;
+            } else if (escolha ==3) {
+                System.out.println("Insira o valor a ser tranferido:");
+                valorTransferencia = leitura.nextDouble();
+                if (saldoAtual<valorTransferencia){
+                    System.out.println("Saldo insuficiente para realizar operação");
+                }else {
+                    System.out.println();
+                    System.out.println("Operação concluída");
+                    saldoAtual -= valorTransferencia;
+                }
+            }
+
+        }
     }
 }

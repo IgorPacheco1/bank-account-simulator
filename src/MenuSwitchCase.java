@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class MenuSwitchCase {
-    public void menu {
+    public void menu (){
+
+        // parte feita apenas para testes
         Scanner leitura = new Scanner(System.in);
 
         System.out.println("Para iniarmos seu atendimento por favor informe os seguintes dados:");
@@ -14,9 +16,9 @@ public class MenuSwitchCase {
 
         System.out.println("=====================================");
         System.out.println("DADOS DA CONTA:");
-        System.out.println("Nome: " + nome); //fazer aparecer de forma dinamina
-        System.out.println("Saldo atual: R$" + saldoAtual); //fazer aparecer de forma dinamina
-        System.out.println("Última transação: Deposito: 1000 "); //fazer aparecer de forma dinamina
+        System.out.println("Nome: " + nome);
+        System.out.println("Saldo atual: R$" + saldoAtual);
+        System.out.println("Última transação: Deposito: 1000 ");
         System.out.println("=====================================");
         System.out.println();
         System.out.println("MENU DE ESCOLHAS");
