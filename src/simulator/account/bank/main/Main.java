@@ -1,8 +1,6 @@
 package simulator.account.bank.main;
 
-import simulator.account.bank.menu.Menu;
-
-import java.util.Scanner;
+import simulator.account.bank.display.Menu;
 
 public class Main {
     public static void main(String[] args) {

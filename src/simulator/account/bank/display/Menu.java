@@ -1,4 +1,4 @@
-package simulator.account.bank.menu;
+package simulator.account.bank.display;
 import java.util.Scanner;
 
     public class Menu {
