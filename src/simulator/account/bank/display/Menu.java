@@ -64,12 +64,12 @@ import simulator.account.bank.models.Conta;
             System.out.println();
             switch (opcao) {
                 case 1 -> criarConta(); //tenho que adicionar as devidas funcionalidades assim que criar elas
-                case 2 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Consultar Saldo" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
-                case 3 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Depositar" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
-                case 4 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Sacar" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
-                case 5 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Transferir" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
-                case 6 -> System.out.println(PURPLE + "  [⚙] Funcionalidade: Consultar Dados do Titular" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
-                case 0 -> System.out.println(YELLOW + "   Obrigado por utilizar nossos serviços! Até logo." + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 2 -> consultarSaldo(); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 3 -> depositar(); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 4 -> sacar(); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 5 -> tranferir(); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 6 -> consultaDadosTitular(); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 0 -> System.out.println(YELLOW + "   Obrigado por utilizar nossos serviços! Até logo." + RESET);
                 default -> System.out.println(RED + "  [!] Opção inválida! Escolha entre 0 e 6." + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
             }
 
