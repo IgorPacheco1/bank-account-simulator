@@ -33,9 +33,9 @@ import java.util.Scanner;
                 System.out.println("  │ " + CYAN + "[4]" + RESET + " Sacar                       │");
                 System.out.println("  │ " + CYAN + "[5]" + RESET + " Transferir                  │");
                 System.out.println("  │ " + PURPLE + "[6]" + RESET + " Consultar Dados do Titular  │");
-                System.out.println("  │                                │");
+                System.out.println("  │                                 │");
                 System.out.println("  │ " + RED + "[0]" + RESET + " Sair do Sistema             │");
-                System.out.println("  └────────────────────────────────┘" + RESET);
+                System.out.println("  └─────────────────────────────────┘" + RESET);
                 System.out.print(BOLD + "\n  ➔ Selecione uma opção: " + RESET);
 
                 if (scanner.hasNextInt()) {
@@ -52,9 +52,9 @@ import java.util.Scanner;
         }
 
         private void exibirCabecalho() {
-            System.out.println(CYAN + "  ┌────────────────────────────────┐");
-            System.out.println("  │ " + BOLD + YELLOW + "      Bank-Account-Sistem     " + RESET + CYAN + "│");
-            System.out.println("  ├────────────────────────────────┤" + RESET);
+            System.out.println(CYAN + "  ┌─────────────────────────────────┐");
+            System.out.println("  │ " + BOLD + YELLOW + "      Bank-Account-Sistem     " + RESET + CYAN + "  │");
+            System.out.println("  ├─────────────────────────────────┤" + RESET);
         }
 
         private void processarOpcao(int opcao) {
@@ -66,7 +66,7 @@ import java.util.Scanner;
                 case 4 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Sacar" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 5 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Transferir" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 6 -> System.out.println(PURPLE + "  [⚙] Funcionalidade: Consultar Dados do Titular" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
-                case 0 -> System.out.println(YELLOW + "  👋 Obrigado por utilizar nossos serviços! Até logo." + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 0 -> System.out.println(YELLOW + "   Obrigado por utilizar nossos serviços! Até logo." + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 default -> System.out.println(RED + "  [!] Opção inválida! Escolha entre 0 e 6." + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
             }
 
