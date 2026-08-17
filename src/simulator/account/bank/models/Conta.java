@@ -8,5 +8,43 @@ public class Conta {
     private boolean contaPoupanca;
 
 
+    public String getTitularConta() {
+        return titularConta;
+    }
 
+    public void setTitularConta(String titularConta) {
+        this.titularConta = titularConta;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public double getSaldoConta() {
+        return saldoConta;
+    }
+
+    public void setSaldoConta(double saldoConta) {
+        this.saldoConta = saldoConta;
+    }
+
+    public boolean isContaCorrente() {
+        return contaCorrente;
+    }
+
+    public void setContaCorrente(boolean contaCorrente) {
+        this.contaCorrente = contaCorrente;
+    }
+
+    public boolean isContaPoupanca() {
+        return contaPoupanca;
+    }
+
+    public void setContaPoupanca(boolean contaPoupanca) {
+        this.contaPoupanca = contaPoupanca;
+    }
 }
