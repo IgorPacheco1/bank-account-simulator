@@ -69,8 +69,8 @@ import simulator.account.bank.models.Conta;
                 case 4 -> sacar(); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 5 -> tranferir(); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 6 -> consultaDadosTitular(); //tenho que adicionar as devidas funcionalidades assim que criar elas
-                case 0 -> System.out.println(YELLOW + "   Obrigado por utilizar nossos serviços! Até logo." + RESET);
-                default -> System.out.println(RED + "  [!] Opção inválida! Escolha entre 0 e 6." + RESET);
+                case 0 -> System.out.println(BOLD + YELLOW + "   Obrigado por utilizar nossos serviços! Até logo." + RESET);
+                default -> System.out.println(BOLD + RED + "  [!] Opção inválida! Escolha entre 0 e 6." + RESET);
             }
 
             if (opcao != 0) {
@@ -192,10 +192,10 @@ import simulator.account.bank.models.Conta;
             } else if (conta.isContaPoupanca()) {
                 tipoDeconta = "Conta poupança";
             }
-            exibirCabecalho("Dados do titular       ");
-            System.out.println("  │ " + GREEN + "[Nome]" + RESET + conta.getTitularConta() + "              │");
-            System.out.println("  │ " + CYAN + "[CPF]" + RESET + conta.getCpf() +"          │");
-            System.out.println("  │ " + CYAN + "[Tipo de conta]" + RESET + tipoDeconta + "      │");
+            exibirCabecalho("Dados do titular   ");
+            System.out.println("  │ " + GREEN + "[Nome] " + RESET + conta.getTitularConta() + "              │");
+            System.out.println("  │ " + CYAN + "[CPF] " + RESET + conta.getCpf() +"               │");
+            System.out.println("  │ " + CYAN + "[Tipo de conta] " + RESET + tipoDeconta + "  │");
             System.out.println("  └─────────────────────────────────┘" + RESET);
 
         }
