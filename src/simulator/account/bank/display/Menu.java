@@ -53,21 +53,21 @@ import java.util.Scanner;
 
         private void exibirCabecalho() {
             System.out.println(CYAN + "  ┌────────────────────────────────┐");
-            System.out.println("  │ " + BOLD + YELLOW + "     🏦 BANCO DIGITAL POO     " + RESET + CYAN + "│");
+            System.out.println("  │ " + BOLD + YELLOW + "      Bank-Account-Sistem     " + RESET + CYAN + "│");
             System.out.println("  ├────────────────────────────────┤" + RESET);
         }
 
         private void processarOpcao(int opcao) {
             System.out.println();
             switch (opcao) {
-                case 1 -> System.out.println(GREEN + "  [⚙] Funcionalidade: Criar Conta" + RESET);
-                case 2 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Consultar Saldo" + RESET);
-                case 3 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Depositar" + RESET);
-                case 4 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Sacar" + RESET);
-                case 5 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Transferir" + RESET);
-                case 6 -> System.out.println(PURPLE + "  [⚙] Funcionalidade: Consultar Dados do Titular" + RESET);
-                case 0 -> System.out.println(YELLOW + "  👋 Obrigado por utilizar nossos serviços! Até logo." + RESET);
-                default -> System.out.println(RED + "  [!] Opção inválida! Escolha entre 0 e 6." + RESET);
+                case 1 -> System.out.println(GREEN + "  [⚙] Funcionalidade: Criar Conta" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 2 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Consultar Saldo" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 3 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Depositar" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 4 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Sacar" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 5 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Transferir" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 6 -> System.out.println(PURPLE + "  [⚙] Funcionalidade: Consultar Dados do Titular" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 0 -> System.out.println(YELLOW + "  👋 Obrigado por utilizar nossos serviços! Até logo." + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                default -> System.out.println(RED + "  [!] Opção inválida! Escolha entre 0 e 6." + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
             }
 
             if (opcao != 0) {
