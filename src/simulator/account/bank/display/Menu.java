@@ -181,11 +181,22 @@ import simulator.account.bank.models.Conta;
 
         private void tranferir(){
             // fazer veriricar se a pessoa tem conta, caso não tiver solicitar a criação e enviar para o menu criarConta
-
+            //quero deixar ele de forma que realmente transfira entre contas e não apenas realize o debito da conta
         }
 
         private void consultaDadosTitular(){
             // fazer veriricar se a pessoa tem conta, caso não tiver solicitar a criação e enviar para o menu criarConta
+            String tipoDeconta ="";
+            if (conta.isContaCorrente()){
+                tipoDeconta = "Conta corrente";
+            } else if (conta.isContaPoupanca()) {
+                tipoDeconta = "Conta poupança";
+            }
+            exibirCabecalho("Dados do titular       ");
+            System.out.println("  │ " + GREEN + "[Nome]" + RESET + conta.getTitularConta() + "              │");
+            System.out.println("  │ " + CYAN + "[CPF]" + RESET + conta.getCpf() +"          │");
+            System.out.println("  │ " + CYAN + "[Tipo de conta]" + RESET + tipoDeconta + "      │");
+            System.out.println("  └─────────────────────────────────┘" + RESET);
 
         }
 
