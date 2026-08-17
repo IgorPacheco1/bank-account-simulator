@@ -144,7 +144,11 @@ import simulator.account.bank.models.Conta;
             System.out.println("  │ " + GREEN + "[Saldo atual] " + RESET +    "R$"+ conta.getSaldoConta() +           "          │");
             System.out.println("  └─────────────────────────────────┘" + RESET);
             System.out.println(BOLD + "\n  ➔ Insira o valor que deseja depositar " + RESET);
-            conta.setSaldoConta(scanner.nextDouble());
+            double valorDeposito = scanner.nextDouble();
+            double saldoFinal = conta.getSaldoConta();
+            saldoFinal += valorDeposito;
+
+
             exibirCabecalho("Operação conluída  ");
             System.out.println("");
             System.out.println("");
@@ -155,6 +159,17 @@ import simulator.account.bank.models.Conta;
         }
 
         private void sacar(){
+            exibirCabecalho("Saque       ");
+            System.out.println("  │ " + GREEN + "[Saldo atual] " + RESET +    "R$"+ conta.getSaldoConta() +           "          │");
+            System.out.println("  └─────────────────────────────────┘" + RESET);
+            System.out.println(BOLD + "\n  ➔ Insira o valor que deseja sacar " + RESET);
+            conta.setSaldoConta(scanner.nextDouble());
+            exibirCabecalho("Operação conluída  ");
+            System.out.println("");
+            System.out.println("");
+            pausar();
+            System.out.println("");
+            exibirMenu();
 
         }
 
