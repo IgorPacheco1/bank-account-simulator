@@ -70,7 +70,7 @@ import simulator.account.bank.models.Conta;
                 case 5 -> tranferir(); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 6 -> consultaDadosTitular(); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 0 -> System.out.println(YELLOW + "   Obrigado por utilizar nossos serviços! Até logo." + RESET);
-                default -> System.out.println(RED + "  [!] Opção inválida! Escolha entre 0 e 6." + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                default -> System.out.println(RED + "  [!] Opção inválida! Escolha entre 0 e 6." + RESET);
             }
 
             if (opcao != 0) {
@@ -132,13 +132,25 @@ import simulator.account.bank.models.Conta;
         }
 
         private void consultarSaldo(){
-            exibirCabecalho("Consulta de saldo");
-            System.out.println("  │ " + GREEN + "[]" + RESET +    conta.getSaldoConta() +           "│");
+            exibirCabecalho("Consulta de saldo  ");
+            System.out.println("  │ " + GREEN + "[Saldo atual] " + RESET +    "R$"+ conta.getSaldoConta() +           "          │");
             System.out.println("  └─────────────────────────────────┘" + RESET);
+            pausar();
 
         }
 
         private void depositar(){
+            exibirCabecalho("Depósito           ");
+            System.out.println("  │ " + GREEN + "[Saldo atual] " + RESET +    "R$"+ conta.getSaldoConta() +           "          │");
+            System.out.println("  └─────────────────────────────────┘" + RESET);
+            System.out.println(BOLD + "\n  ➔ Insira o valor que deseja depositar " + RESET);
+            conta.setSaldoConta(scanner.nextDouble());
+            exibirCabecalho("Operação conluída  ");
+            System.out.println("");
+            System.out.println("");
+            pausar();
+            System.out.println("");
+            exibirMenu();
 
         }
 
@@ -155,7 +167,7 @@ import simulator.account.bank.models.Conta;
         }
 
         private void pausar() {
-            System.out.print("\n  Pressione ENTER para continuar...");
+            //System.out.print("\n  Pressione ENTER para continuar...");
             scanner.nextLine();
         }
 
