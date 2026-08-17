@@ -1,5 +1,6 @@
 package simulator.account.bank.display;
 import java.util.Scanner;
+import simulator.account.bank.models.Conta;
 
     public class Menu {
 
@@ -15,9 +16,11 @@ import java.util.Scanner;
         private static final String PURPLE = "\u001B[35m";
 
         private final Scanner scanner;
+        private final Conta conta;
 
         public Menu() {
             this.scanner = new Scanner(System.in);
+            this.conta = new Conta();
         }
 
         public void exibirMenu() {
@@ -75,8 +78,47 @@ import java.util.Scanner;
             }
         }
 
-        private void criarConta(){
-            exibirCabecalho("Criação de conta");
+        public void criarConta(){
+            int opcao = -1;
+            String nome ="";
+            String cpf = "";
+            boolean contaCorrente=false;
+            boolean contaPoupanca=false;
+
+            do{
+                exibirCabecalho("Criação de conta   ");
+                System.out.println("  │ " + GREEN + "[]" + RESET + " Insira seu nome              │");
+                System.out.println("  │ " + CYAN + "[]" + RESET + " Informe seu CPF              │");
+                System.out.println("  │ " + CYAN + "[]" + RESET + " Escolha o tipo de conta      │");
+                System.out.println("  │ " + RED + "[0]" + RESET + " Sair do Sistema             │");
+                System.out.println("  └─────────────────────────────────┘" + RESET);
+                System.out.println(BOLD + "\n  ➔ Lembrando os dados devem ser digitados respectivamente " + RESET);
+                //perguntar o professor se seria o correto instaciar o obj aqui ou na main
+                nome = scanner.nextLine();
+                cpf = scanner.nextLine();
+                exibirCabecalho("Criação de conta   ");
+                System.out.println("  │ " + GREEN + "[1]" + RESET + " Conta corrente              │");
+                System.out.println("  │ " + CYAN + "[2]" + RESET + " Conta poupança              │");
+                System.out.println("  │ " + RED + "[0]" + RESET + " Sair do Sistema             │");
+                System.out.println("  └─────────────────────────────────┘" + RESET);
+                System.out.println(BOLD + "\n  ➔ Lembrando os dados devem ser digitados respectivamente " + RESET);
+                int escolha = scanner.nextInt();
+                if (escolha == 1){
+                    contaCorrente = true;
+                    contaPoupanca = false;
+                } else if (escolha == 2) {
+                    contaCorrente = false;
+                    contaPoupanca = true;
+                }
+                conta.setTitularConta(nome);
+                conta.setCpf(cpf);
+                conta.setContaCorrente(contaCorrente);
+                conta.setContaPoupanca(contaPoupanca);
+                exibirCabecalho("Dados cadastrados com sucesso");
+                System.out.println(BOLD + "\n  ➔ Aperte o 0 para retornar" + RESET);
+
+            }while (opcao!=0);
+
 
         }
 
