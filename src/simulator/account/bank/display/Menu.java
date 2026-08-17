@@ -116,6 +116,7 @@ import simulator.account.bank.models.Conta;
                 exibirCabecalho("Dados cadastrados  ");
                 System.out.println("");
                 System.out.println("");
+                pausar();
                 opcao =  0;
                 exibirMenu();
 
