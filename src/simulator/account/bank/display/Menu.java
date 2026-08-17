@@ -132,6 +132,7 @@ import simulator.account.bank.models.Conta;
         }
 
         private void consultarSaldo(){
+            // fazer veriricar se a pessoa tem conta, caso não tiver solicitar a criação e enviar para o menu criarConta
             exibirCabecalho("Consulta de saldo  ");
             System.out.println("  │ " + GREEN + "[Saldo atual] " + RESET +    "R$"+ conta.getSaldoConta() +           "          │");
             System.out.println("  └─────────────────────────────────┘" + RESET);
@@ -140,13 +141,15 @@ import simulator.account.bank.models.Conta;
         }
 
         private void depositar(){
+            // fazer veriricar se a pessoa tem conta, caso não tiver solicitar a criação e enviar para o menu criarConta
             exibirCabecalho("Depósito           ");
             System.out.println("  │ " + GREEN + "[Saldo atual] " + RESET +    "R$"+ conta.getSaldoConta() +           "          │");
             System.out.println("  └─────────────────────────────────┘" + RESET);
             System.out.println(BOLD + "\n  ➔ Insira o valor que deseja depositar " + RESET);
-            double valorDeposito = scanner.nextDouble();
-            double saldoFinal = conta.getSaldoConta();
-            saldoFinal += valorDeposito;
+            conta.setSaldoConta(scanner.nextDouble());
+//            double valorDeposito = scanner.nextDouble();
+//            double saldoFinal = conta.getSaldoConta();
+//            saldoFinal += valorDeposito;
 
 
             exibirCabecalho("Operação conluída  ");
@@ -159,11 +162,14 @@ import simulator.account.bank.models.Conta;
         }
 
         private void sacar(){
-            exibirCabecalho("Saque       ");
+            // fazer veriricar se a pessoa tem conta, caso não tiver solicitar a criação e enviar para o menu criarConta
+            exibirCabecalho("Saque            ");
             System.out.println("  │ " + GREEN + "[Saldo atual] " + RESET +    "R$"+ conta.getSaldoConta() +           "          │");
             System.out.println("  └─────────────────────────────────┘" + RESET);
             System.out.println(BOLD + "\n  ➔ Insira o valor que deseja sacar " + RESET);
-            conta.setSaldoConta(scanner.nextDouble());
+            double valorSaque = scanner.nextDouble();
+            conta.setSaldoConta(conta.getSaldoConta() - valorSaque);
+
             exibirCabecalho("Operação conluída  ");
             System.out.println("");
             System.out.println("");
@@ -174,15 +180,17 @@ import simulator.account.bank.models.Conta;
         }
 
         private void tranferir(){
+            // fazer veriricar se a pessoa tem conta, caso não tiver solicitar a criação e enviar para o menu criarConta
 
         }
 
         private void consultaDadosTitular(){
+            // fazer veriricar se a pessoa tem conta, caso não tiver solicitar a criação e enviar para o menu criarConta
 
         }
 
         private void pausar() {
-            //System.out.print("\n  Pressione ENTER para continuar...");
+            System.out.print("\n  Pressione ENTER para continuar...");
             scanner.nextLine();
         }
 
