@@ -1,3 +1,5 @@
+package simulator.account.bank.main;
+
 import java.util.Scanner;
 
 public class Main {
