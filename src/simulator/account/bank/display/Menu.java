@@ -25,7 +25,7 @@ import java.util.Scanner;
 
             do {
                 limparTela();
-                exibirCabecalho();
+                exibirCabecalho("Bank-Account-Sistem");
 
                 System.out.println("  │ " + GREEN + "[1]" + RESET + " Criar Conta                 │");
                 System.out.println("  │ " + CYAN + "[2]" + RESET + " Consultar Saldo             │");
@@ -51,16 +51,16 @@ import java.util.Scanner;
             } while (opcao != 0);
         }
 
-        private void exibirCabecalho() {
+        private void exibirCabecalho(String titulo) {
             System.out.println(CYAN + "  ┌─────────────────────────────────┐");
-            System.out.println("  │ " + BOLD + YELLOW + "      Bank-Account-Sistem     " + RESET + CYAN + "  │");
+            System.out.println("  │ " + BOLD + YELLOW + "      " + titulo + "     " + RESET + CYAN + "  │");
             System.out.println("  ├─────────────────────────────────┤" + RESET);
         }
 
         private void processarOpcao(int opcao) {
             System.out.println();
             switch (opcao) {
-                case 1 -> System.out.println(GREEN + "  [⚙] Funcionalidade: Criar Conta" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
+                case 1 -> criarConta(); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 2 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Consultar Saldo" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 3 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Depositar" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
                 case 4 -> System.out.println(CYAN + "  [⚙] Funcionalidade: Sacar" + RESET); //tenho que adicionar as devidas funcionalidades assim que criar elas
@@ -73,6 +73,31 @@ import java.util.Scanner;
             if (opcao != 0) {
                 pausar();
             }
+        }
+
+        private void criarConta(){
+            exibirCabecalho("Criação de conta");
+
+        }
+
+        private void consultarSaldo(){
+
+        }
+
+        private void depositar(){
+
+        }
+
+        private void sacar(){
+
+        }
+
+        private void tranferir(){
+
+        }
+
+        private void consultaDadosTitular(){
+
         }
 
         private void pausar() {
