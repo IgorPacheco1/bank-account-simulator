@@ -78,14 +78,14 @@ import simulator.account.bank.models.Conta;
             }
         }
 
-        public void criarConta(){
+        private void criarConta(){
             int opcao = -1;
             String nome ="";
             String cpf = "";
             boolean contaCorrente=false;
             boolean contaPoupanca=false;
 
-            do{
+            while (opcao!=0){
                 exibirCabecalho("Criação de conta   ");
                 System.out.println("  │ " + GREEN + "[]" + RESET + " Insira seu nome              │");
                 System.out.println("  │ " + CYAN + "[]" + RESET + " Informe seu CPF              │");
@@ -101,7 +101,6 @@ import simulator.account.bank.models.Conta;
                 System.out.println("  │ " + CYAN + "[2]" + RESET + " Conta poupança              │");
                 System.out.println("  │ " + RED + "[0]" + RESET + " Sair do Sistema             │");
                 System.out.println("  └─────────────────────────────────┘" + RESET);
-                System.out.println(BOLD + "\n  ➔ Lembrando os dados devem ser digitados respectivamente " + RESET);
                 int escolha = scanner.nextInt();
                 if (escolha == 1){
                     contaCorrente = true;
@@ -114,10 +113,13 @@ import simulator.account.bank.models.Conta;
                 conta.setCpf(cpf);
                 conta.setContaCorrente(contaCorrente);
                 conta.setContaPoupanca(contaPoupanca);
-                exibirCabecalho("Dados cadastrados com sucesso");
-                System.out.println(BOLD + "\n  ➔ Aperte o 0 para retornar" + RESET);
+                exibirCabecalho("Dados cadastrados  ");
+                System.out.println("");
+                System.out.println("");
+                opcao =  0;
+                exibirMenu();
 
-            }while (opcao!=0);
+            };
 
 
         }
