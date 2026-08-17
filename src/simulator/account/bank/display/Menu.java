@@ -94,7 +94,12 @@ import simulator.account.bank.models.Conta;
                 System.out.println("  └─────────────────────────────────┘" + RESET);
                 System.out.println(BOLD + "\n  ➔ Lembrando os dados devem ser digitados respectivamente " + RESET);
                 //perguntar o professor se seria o correto instaciar o obj aqui ou na main
+
                 nome = scanner.nextLine();
+                if (nome.contains("0")){ // preciso arrumar um jeito de comparar para sair caso aperte errado
+                    exibirMenu();
+                    return;
+                }
                 cpf = scanner.nextLine();
                 exibirCabecalho("Criação de conta   ");
                 System.out.println("  │ " + GREEN + "[1]" + RESET + " Conta corrente              │");
@@ -117,6 +122,7 @@ import simulator.account.bank.models.Conta;
                 System.out.println("");
                 System.out.println("");
                 pausar();
+                System.out.println("");
                 opcao =  0;
                 exibirMenu();
 
@@ -126,6 +132,9 @@ import simulator.account.bank.models.Conta;
         }
 
         private void consultarSaldo(){
+            exibirCabecalho("Consulta de saldo");
+            System.out.println("  │ " + GREEN + "[]" + RESET +    conta.getSaldoConta() +           "│");
+            System.out.println("  └─────────────────────────────────┘" + RESET);
 
         }
 
@@ -151,7 +160,6 @@ import simulator.account.bank.models.Conta;
         }
 
         private void limparTela() {
-            // Envia sequências de escape ANSI para limpar a tela do terminal
             System.out.print("\033[H\033[2J");
             System.out.flush();
         }
