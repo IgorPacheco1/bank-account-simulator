@@ -29,7 +29,10 @@ public class Conta {
     }
 
     public void setSaldoConta(double saldoConta) {
-        this.saldoConta = saldoConta;
+        if (saldoConta<0){
+            System.out.println("ERRO: saldo insuficiente");
+
+        }else this.saldoConta = saldoConta;
     }
 
     public boolean isContaCorrente() {
