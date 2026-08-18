@@ -1,8 +1,8 @@
 package simulator.account.bank.display;
 
-import java.util.Scanner;
-
 import simulator.account.bank.models.Conta;
+
+import java.util.Scanner;
 
 public class Menu {
 
