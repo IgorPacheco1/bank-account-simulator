@@ -44,11 +44,11 @@ public class Menu {
 
             if (scanner.hasNextInt()) {
                 opcao = scanner.nextInt();
-                scanner.nextLine(); // Limpar buffer do teclado
+                scanner.nextLine();
                 processarOpcao(opcao);
             } else {
                 System.out.println(RED + "\n  [!] Opção inválida! Digite um número." + RESET);
-                scanner.nextLine(); // Limpar entrada incorreta
+                scanner.nextLine();
                 pausar();
             }
 
